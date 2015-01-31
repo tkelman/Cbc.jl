@@ -32,7 +32,7 @@ end
     provides(WinRPM.RPM, "Cbc", [libclp,libcbcsolver], os = :Windows)
 end
 
-cbcname = "Cbc-2.8.12"
+cbcname = "Cbc-2.9.0"
 
 provides(Sources, URI("http://www.coin-or.org/download/source/Cbc/$cbcname.tgz"),
     [libclp,libcbcsolver], os = :Unix)
