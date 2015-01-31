@@ -54,6 +54,7 @@ provides(SimpleBuild,
         GetSources(libclp)
         @build_steps begin
             ChangeDirectory(srcdir)
+            `cat $patchdir/coinutils-labs.patch` |> `patch -p1`
             `./configure --prefix=$prefix --enable-dependency-linking --without-blas --without-lapack --enable-cbc-parallel`
             `make install`
         end

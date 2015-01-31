@@ -1,0 +1,15 @@
+diff --git a/CoinUtils/src/CoinRational.cpp b/CoinUtils/src/CoinRational.cpp
+index 8e76b9b..0049aba 100644
+--- a/CoinUtils/src/CoinRational.cpp
++++ b/CoinUtils/src/CoinRational.cpp
+@@ -4,6 +4,10 @@
+ 
+ #include <algorithm>
+ #include <cmath>
++#ifdef __clang__
++//labs() is in cstdlib with clang
++#include <cstdlib>
++#endif
+ 
+ #include "CoinRational.hpp"
+ 
